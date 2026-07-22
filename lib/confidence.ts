@@ -8,6 +8,11 @@ export type MethodConfidence = {
   accepted: boolean;
 };
 
+export type MethodCounts = {
+  worked: number;
+  failed: number;
+};
+
 /**
  * シード信頼度とユーザー報告を合成する。
  * WHY: 報告が少ないうちはシードを残し、増えるほど実測を優先する。
@@ -21,8 +26,19 @@ export function mergeMethodConfidence(
   const relevant = reports.filter(
     (r) => r.shopId === shop.id && r.method === method,
   );
-  const worked = relevant.filter((r) => r.kind === "worked").length;
-  const failed = relevant.filter((r) => r.kind === "failed").length;
+  return mergeMethodCounts(shop, method, {
+    worked: relevant.filter((r) => r.kind === "worked").length,
+    failed: relevant.filter((r) => r.kind === "failed").length,
+  });
+}
+
+export function mergeMethodCounts(
+  shop: Shop,
+  method: PaymentMethod,
+  counts: MethodCounts,
+): MethodConfidence {
+  const worked = counts.worked;
+  const failed = counts.failed;
   const total = worked + failed;
   const seedAccepted = shop.payments.includes(method);
 

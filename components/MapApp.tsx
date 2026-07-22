@@ -1,11 +1,12 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { FilterBar } from "@/components/FilterBar";
 import { PinSheet } from "@/components/PinSheet";
 import { filterShops } from "@/lib/shops";
 import { useMapUiStore } from "@/store/mapUiStore";
+import { useReportStore } from "@/store/reportStore";
 
 const MapView = dynamic(
   () => import("@/components/MapView").then((m) => m.MapView),
@@ -24,6 +25,11 @@ export function MapApp() {
   const genre = useMapUiStore((s) => s.genre);
   const cashlessOnly = useMapUiStore((s) => s.cashlessOnly);
   const selectedId = useMapUiStore((s) => s.selectedId);
+  const hydrate = useReportStore((s) => s.hydrate);
+
+  useEffect(() => {
+    void hydrate();
+  }, [hydrate]);
 
   const shops = useMemo(
     () => filterShops({ payment, genre, cashlessOnly }),

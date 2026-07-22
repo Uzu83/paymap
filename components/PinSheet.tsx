@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { formatConfidence, mergeMethodConfidence } from "@/lib/confidence";
+import { useState } from "react";
+import { formatConfidence, mergeMethodCounts } from "@/lib/confidence";
 import { GENRE_LABELS, PAYMENT_FILTERS, PAYMENT_LABELS } from "@/lib/payments";
 import type { PaymentMethod, Shop } from "@/lib/types";
 import { useMapUiStore } from "@/store/mapUiStore";
@@ -9,12 +10,15 @@ import { useReportStore } from "@/store/reportStore";
 
 export function PinSheet({ shop }: { shop: Shop }) {
   const selectShop = useMapUiStore((s) => s.selectShop);
-  const reports = useReportStore((s) => s.reports);
+  const stats = useReportStore((s) => s.stats);
   const addReport = useReportStore((s) => s.addReport);
+  const [busy, setBusy] = useState<string | null>(null);
+  const [flash, setFlash] = useState<string | null>(null);
+
   const methods = PAYMENT_FILTERS.filter(
     (m) =>
       shop.payments.includes(m) ||
-      reports.some((r) => r.shopId === shop.id && r.method === m),
+      stats.some((s) => s.shop_id === shop.id && s.method === m),
   );
   const showMethods: PaymentMethod[] =
     methods.length > 0 ? methods : PAYMENT_FILTERS.slice(0, 3);
@@ -23,6 +27,15 @@ export function PinSheet({ shop }: { shop: Shop }) {
     shop.payments.length === 1 &&
     shop.payments[0] === "cash" &&
     methods.length === 0;
+
+  async function onReport(method: PaymentMethod, kind: "worked" | "failed") {
+    const key = `${method}:${kind}`;
+    setBusy(key);
+    setFlash(null);
+    const res = await addReport(shop.id, method, kind);
+    setBusy(null);
+    setFlash(res.ok ? "報告ありがとう！" : (res.error ?? "失敗しました"));
+  }
 
   return (
     <section className="pointer-events-auto absolute inset-x-0 bottom-0 z-[1000] max-h-[55vh] overflow-y-auto rounded-t-2xl bg-[var(--panel)] px-4 pb-6 pt-3 shadow-[0_-8px_32px_rgba(12,31,26,0.18)] ring-1 ring-[var(--line)]">
@@ -62,9 +75,18 @@ export function PinSheet({ shop }: { shop: Shop }) {
 
       <div className="mt-4">
         <h3 className="text-sm font-semibold text-[var(--ink)]">対応決済</h3>
+        {flash ? (
+          <p className="mt-1 text-xs text-[var(--pay-deep)]">{flash}</p>
+        ) : null}
         <ul className="mt-2 space-y-2">
           {showMethods.map((method) => {
-            const conf = mergeMethodConfidence(shop, method, reports);
+            const remote = stats.find(
+              (s) => s.shop_id === shop.id && s.method === method,
+            );
+            const conf = mergeMethodCounts(shop, method, {
+              worked: remote?.worked ?? 0,
+              failed: remote?.failed ?? 0,
+            });
             return (
               <li
                 key={method}
@@ -88,17 +110,19 @@ export function PinSheet({ shop }: { shop: Shop }) {
                 <div className="mt-2 flex gap-2">
                   <button
                     type="button"
-                    onClick={() => addReport(shop.id, method, "worked")}
-                    className="flex-1 rounded-md bg-[var(--pay)] px-2 py-1.5 text-sm font-medium text-[var(--ink)]"
+                    disabled={busy !== null}
+                    onClick={() => onReport(method, "worked")}
+                    className="flex-1 rounded-md bg-[var(--pay)] px-2 py-1.5 text-sm font-medium text-[var(--ink)] disabled:opacity-50"
                   >
-                    今使えた
+                    {busy === `${method}:worked` ? "送信中…" : "今使えた"}
                   </button>
                   <button
                     type="button"
-                    onClick={() => addReport(shop.id, method, "failed")}
-                    className="flex-1 rounded-md bg-[var(--wash)] px-2 py-1.5 text-sm font-medium text-[var(--ink)] ring-1 ring-[var(--line)]"
+                    disabled={busy !== null}
+                    onClick={() => onReport(method, "failed")}
+                    className="flex-1 rounded-md bg-[var(--wash)] px-2 py-1.5 text-sm font-medium text-[var(--ink)] ring-1 ring-[var(--line)] disabled:opacity-50"
                   >
-                    使えなかった
+                    {busy === `${method}:failed` ? "送信中…" : "使えなかった"}
                   </button>
                 </div>
                 {(conf.worked > 0 || conf.failed > 0) && (
