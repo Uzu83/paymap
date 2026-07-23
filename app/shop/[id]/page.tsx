@@ -12,6 +12,19 @@ export function generateStaticParams() {
   return SHOPS.map((shop) => ({ id: shop.id }));
 }
 
+function shopMetadataKeywords(
+  shop: NonNullable<ReturnType<typeof getShopById>>,
+) {
+  const keywords = ["Paymap", "使えるペイ", "キャッシュレス"];
+  if (shop.area === "fukuoka") {
+    keywords.push("福岡", "福岡市", "天神", "博多");
+  }
+  if (shop.payments.includes("paypay")) {
+    keywords.push("PayPay");
+  }
+  return keywords;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const shop = getShopById(id);
@@ -21,9 +34,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .map((p) => PAYMENT_LABELS[p])
     .join("・");
   const payText = methods || "現金のみ";
+  const areaPhrase = shop.area === "fukuoka" ? "福岡・" : "";
+  const paypayPhrase = shop.payments.includes("paypay") ? " PayPay対応。" : "";
   return {
-    title: `${shop.name}｜${payText}対応`,
-    description: `${shop.name}（${shop.address}）のキャッシュレス対応・営業時間・ジャンル。Paymap（使えるペイ）`,
+    title: `${shop.name}｜${areaPhrase}${payText}対応`,
+    description: `${shop.name}（${shop.address}）の${areaPhrase}キャッシュレス対応・営業時間・ジャンル。${paypayPhrase}Paymap（使えるペイ）`,
+    keywords: shopMetadataKeywords(shop),
   };
 }
 

@@ -4,6 +4,7 @@ import L from "leaflet";
 import { useEffect, useMemo } from "react";
 import { MapContainer, Marker, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import { LocateControl } from "@/components/LocateControl";
 import { isCashless } from "@/lib/payments";
 import { FUKUOKA_CENTER } from "@/lib/shops";
 import type { Shop } from "@/lib/types";
@@ -63,6 +64,7 @@ export function MapView({ shops }: { shops: Shop[] }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <FitShops shops={shops} />
+      <LocateControl />
       {markers}
     </MapContainer>
   );

@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 
 export default function FukuokaAreaPage() {
   const shops = shopsInArea("fukuoka").filter((s) => !s.sample);
+  const estimated = shops.filter((s) => s.paymentStatus === "estimated").length;
+  const unverified = shops.filter((s) => s.paymentStatus === "unverified").length;
 
   return (
     <main className="mx-auto min-h-full max-w-2xl px-4 py-8">
@@ -29,6 +31,15 @@ export default function FukuokaAreaPage() {
       <p className="mt-3 text-[var(--muted)]">
         OSM 由来シード {shops.length}{" "}
         件。チェーンは一般対応の推定、個人店は未検証が多い。報告で精度が上がります。
+      </p>
+      <p className="mt-2 text-sm text-[var(--muted)]">
+        内訳:{" "}
+        <span className="font-medium text-[var(--ink)]">
+          チェーン推定 {estimated} 件
+        </span>
+        {" · "}
+        <span className="font-medium text-[var(--ink)]">未検証 {unverified} 件</span>
+        （現地確認済の捏造なし）
       </p>
       <ul className="mt-8 divide-y divide-[var(--line)] rounded-2xl bg-[var(--panel)] ring-1 ring-[var(--line)]">
         {shops.map((shop) => {

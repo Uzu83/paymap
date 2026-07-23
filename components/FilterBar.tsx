@@ -22,12 +22,19 @@ export function FilterBar() {
 
   return (
     <div className="pointer-events-auto flex w-full flex-col gap-2">
-      <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {AREAS.map((a) => (
-          <Chip key={a} active={area === a} onClick={() => setArea(a)}>
-            {AREA_LABELS[a]}
-          </Chip>
-        ))}
+      <div>
+        <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {AREAS.map((a) => (
+            <Chip key={a} active={area === a} onClick={() => setArea(a)}>
+              {AREA_LABELS[a]}
+            </Chip>
+          ))}
+        </div>
+        {area === "shibuya" ? (
+          <p className="mt-1 text-xs text-[var(--warn)]">
+            サンプル比較用。審査デモは福岡を使ってください
+          </p>
+        ) : null}
       </div>
       <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Chip

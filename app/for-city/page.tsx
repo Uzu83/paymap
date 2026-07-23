@@ -225,10 +225,42 @@ export default function ForCityPage() {
         </ul>
       </section>
 
-      <p className="mt-10 text-xs text-[var(--muted)]">
-        For city staff / partners: open the map, filter by PayPay, tap a pin,
-        report worked/failed — confidence updates for everyone. No fake traction.
-      </p>
+      <section className="mt-10 space-y-3" lang="en">
+        <h2 className="text-lg font-semibold">For inbound visitors &amp; city partners</h2>
+        <p className="text-[var(--muted)] leading-relaxed">
+          Paymap shows whether common cashless methods (PayPay, credit cards, transit
+          IC, etc.) are likely to work at real shops around Tenjin and Hakata — before
+          you order or reach the counter.
+        </p>
+        <ul className="list-disc space-y-2 pl-5 text-sm text-[var(--muted)]">
+          <li>
+            Open the{" "}
+            <Link href="/" className="text-[var(--pay-deep)] underline">
+              map
+            </Link>
+            , filter by your payment app, and tap a pin for details.
+          </li>
+          <li>
+            Badges distinguish <strong className="font-medium text-[var(--ink)]">chain estimates</strong>{" "}
+            from <strong className="font-medium text-[var(--ink)]">unverified</strong>{" "}
+            independent shops — we do not claim field verification we have not done.
+          </li>
+          <li>
+            Tap <em>worked</em> / <em>did not work</em> after paying to help the next
+            visitor. Reports are aggregated; we do not fabricate traction for pitches.
+          </li>
+        </ul>
+        <p className="text-sm text-[var(--muted)]">
+          Demo:{" "}
+          <a href={DEMO_URL} className="text-[var(--pay-deep)] underline">
+            {DEMO_URL}
+          </a>
+          {" · "}
+          <Link href="/area/fukuoka" className="text-[var(--pay-deep)] underline">
+            Fukuoka shop list
+          </Link>
+        </p>
+      </section>
     </main>
   );
 }

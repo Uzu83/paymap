@@ -50,6 +50,9 @@ export function PinSheet({ shop }: { shop: Shop }) {
               {shop.source === "osm" ? " · OSM" : ""}
             </span>
             <PaymentStatusBadge shop={shop} />
+            <span className="text-[var(--muted)]">
+              · シード {Math.round(shop.seedConfidence * 100)}%
+            </span>
           </p>
           <h2 className="mt-0.5 font-[family-name:var(--font-display)] text-xl font-semibold tracking-tight text-[var(--ink)]">
             {shop.name}

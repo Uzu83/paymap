@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import { FilterBar } from "@/components/FilterBar";
 import { PinSheet } from "@/components/PinSheet";
+import { TrustLegend } from "@/components/TrustLegend";
 import { AREA_LABELS, filterShops } from "@/lib/shops";
 import { useMapUiStore } from "@/store/mapUiStore";
 import { useReportStore } from "@/store/reportStore";
@@ -66,12 +67,26 @@ export function MapApp() {
             <p className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs text-[var(--muted)] ring-1 ring-[var(--line)] backdrop-blur">
               {shops.length}件
             </p>
-            <Link
-              href="/for-city"
-              className="rounded-md bg-[var(--ink)] px-2 py-1 text-xs font-medium text-[var(--panel)]"
-            >
-              市向け説明
-            </Link>
+            <div className="flex flex-wrap justify-end gap-1">
+              <Link
+                href="/area/fukuoka"
+                className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
+              >
+                福岡エリア
+              </Link>
+              <Link
+                href="/for-city"
+                className="rounded-md bg-[var(--ink)] px-2 py-1 text-xs font-medium text-[var(--panel)]"
+              >
+                市向け説明
+              </Link>
+              <Link
+                href="/for-city/print"
+                className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
+              >
+                印刷1枚
+              </Link>
+            </div>
           </div>
         </div>
         <div className="mt-3">
@@ -80,6 +95,10 @@ export function MapApp() {
       </header>
 
       {selected ? <PinSheet shop={selected} /> : null}
+
+      <div className="pointer-events-none absolute bottom-4 left-4 z-[500]">
+        <TrustLegend />
+      </div>
 
       {shops.length === 0 ? (
         <div className="pointer-events-none absolute inset-x-0 bottom-8 z-[500] flex justify-center px-4">
