@@ -2,11 +2,9 @@ import type { MetadataRoute } from "next";
 import { SHOPS } from "@/lib/shops";
 
 function siteBaseUrl(): string {
+  // WHY: VERCEL_URL はデプロイ固有ホストになり canonical が割れる。本番固定を優先。
   if (process.env.NEXT_PUBLIC_SITE_URL) {
     return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
-  }
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
   }
   return "https://paymap-six.vercel.app";
 }
