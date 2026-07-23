@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { shopsInArea } from "@/lib/shops";
-
-export const metadata: Metadata = {
-  title: "福岡市向け — Paymap（使えるペイ）",
-  description:
-    "福岡市のキャッシュレス推進・観光受入に接続する店舗決済マップ。実証仮説とKPI。",
-};
 
 const DEMO_URL = "https://paymap-six.vercel.app";
 
@@ -54,8 +47,12 @@ const ASKS = [
 
 export default function ForCityPage() {
   const fukuoka = shopsInArea("fukuoka").filter((s) => !s.sample);
-  const estimated = fukuoka.filter((s) => s.paymentStatus === "estimated").length;
-  const unverified = fukuoka.filter((s) => s.paymentStatus === "unverified").length;
+  const estimated = fukuoka.filter(
+    (s) => s.paymentStatus === "estimated",
+  ).length;
+  const unverified = fukuoka.filter(
+    (s) => s.paymentStatus === "unverified",
+  ).length;
 
   return (
     <main className="mx-auto min-h-full max-w-2xl px-4 py-10">
@@ -73,8 +70,9 @@ export default function ForCityPage() {
         福岡市向け説明
       </h1>
       <p className="mt-3 text-[var(--muted)] leading-relaxed">
-        「今この店で、自分の決済が通るか」を地図と市民・観光客の報告で更新する Web
-        アプリです。市のキャッシュレス推進・観光 DX との接点を明示し、虚偽のトラクションは出しません。
+        「今この店で、自分の決済が通るか」を地図と市民・観光客の報告で更新する
+        Web アプリです。市のキャッシュレス推進・観光 DX
+        との接点を明示し、虚偽のトラクションは出しません。
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3 text-sm">
@@ -89,6 +87,12 @@ export default function ForCityPage() {
           className="rounded-lg bg-[var(--wash)] px-3 py-1.5 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] hover:bg-[var(--panel)]"
         >
           ピッチ文書
+        </a>
+        <a
+          href="https://github.com/Uzu83/paymap/blob/main/docs/pitch-one-pager.md"
+          className="rounded-lg bg-[var(--wash)] px-3 py-1.5 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] hover:bg-[var(--panel)]"
+        >
+          1枚サマリー（Markdown）
         </a>
         <a
           href="https://github.com/Uzu83/paymap/blob/main/docs/ops-first-50-reports.md"
@@ -123,11 +127,13 @@ export default function ForCityPage() {
           </li>
           <li>PayPay / クレカ等でフィルタ</li>
           <li>
-            ピンを開き「今使えた / 使えなかった」で信頼度を更新。バッジで「チェーン推定」「未検証」を確認
+            ピンを開き「今使えた /
+            使えなかった」で信頼度を更新。バッジで「チェーン推定」「未検証」を確認
           </li>
         </ol>
         <p className="text-sm text-[var(--muted)]">
-          現状シード: チェーン推定 {estimated} 件 · 未検証 {unverified} 件（捏造報告なし）
+          現状シード: チェーン推定 {estimated} 件 · 未検証 {unverified}{" "}
+          件（捏造報告なし）
         </p>
       </section>
 
@@ -144,8 +150,13 @@ export default function ForCityPage() {
             </thead>
             <tbody className="text-[var(--muted)]">
               {PROGRAMS.map((p) => (
-                <tr key={p.name} className="border-b border-[var(--line)] align-top">
-                  <td className="py-3 pr-3 font-medium text-[var(--ink)]">{p.name}</td>
+                <tr
+                  key={p.name}
+                  className="border-b border-[var(--line)] align-top"
+                >
+                  <td className="py-3 pr-3 font-medium text-[var(--ink)]">
+                    {p.name}
+                  </td>
                   <td className="py-3 pr-3">{p.fit}</td>
                   <td className="py-3">{p.gap}</td>
                 </tr>
@@ -159,11 +170,16 @@ export default function ForCityPage() {
         <h2 className="text-lg font-semibold">3ヶ月パイロット計画（案）</h2>
         <ol className="space-y-4">
           {TIMELINE.map((t) => (
-            <li key={t.month} className="rounded-xl bg-[var(--panel)] p-4 ring-1 ring-[var(--line)]">
+            <li
+              key={t.month}
+              className="rounded-xl bg-[var(--panel)] p-4 ring-1 ring-[var(--line)]"
+            >
               <p className="text-xs font-semibold tracking-wide text-[var(--pay-deep)]">
                 {t.month} · {t.title}
               </p>
-              <p className="mt-1.5 text-sm text-[var(--muted)] leading-relaxed">{t.body}</p>
+              <p className="mt-1.5 text-sm text-[var(--muted)] leading-relaxed">
+                {t.body}
+              </p>
             </li>
           ))}
         </ol>
@@ -180,7 +196,9 @@ export default function ForCityPage() {
       </section>
 
       <section className="mt-10 space-y-3">
-        <h2 className="text-lg font-semibold">市・パートナーへのお願い（Ask）</h2>
+        <h2 className="text-lg font-semibold">
+          市・パートナーへのお願い（Ask）
+        </h2>
         <ul className="list-disc space-y-2 pl-5 text-[var(--muted)]">
           {ASKS.map((ask) => (
             <li key={ask}>{ask}</li>
@@ -211,12 +229,16 @@ export default function ForCityPage() {
         </p>
         <ul className="list-disc space-y-2 pl-5 text-sm text-[var(--muted)]">
           <li>
-            <strong className="font-medium text-[var(--ink)]">分離トリガー</strong>
-            ：パイロット採択・週次報告が安定（目安: 50 件以上の実報告）または無料枠上限接近
+            <strong className="font-medium text-[var(--ink)]">
+              分離トリガー
+            </strong>
+            ：パイロット採択・週次報告が安定（目安: 50
+            件以上の実報告）または無料枠上限接近
           </li>
           <li>
             <strong className="font-medium text-[var(--ink)]">分離内容</strong>
-            ：Paymap 専用 Supabase プロジェクト、テーブル・RLS・バックアップの独立
+            ：Paymap 専用 Supabase
+            プロジェクト、テーブル・RLS・バックアップの独立
           </li>
           <li>
             <strong className="font-medium text-[var(--ink)]">移行</strong>
@@ -226,11 +248,13 @@ export default function ForCityPage() {
       </section>
 
       <section className="mt-10 space-y-3" lang="en">
-        <h2 className="text-lg font-semibold">For inbound visitors &amp; city partners</h2>
+        <h2 className="text-lg font-semibold">
+          For inbound visitors &amp; city partners
+        </h2>
         <p className="text-[var(--muted)] leading-relaxed">
-          Paymap shows whether common cashless methods (PayPay, credit cards, transit
-          IC, etc.) are likely to work at real shops around Tenjin and Hakata — before
-          you order or reach the counter.
+          Paymap shows whether common cashless methods (PayPay, credit cards,
+          transit IC, etc.) are likely to work at real shops around Tenjin and
+          Hakata — before you order or reach the counter.
         </p>
         <ul className="list-disc space-y-2 pl-5 text-sm text-[var(--muted)]">
           <li>
@@ -241,13 +265,21 @@ export default function ForCityPage() {
             , filter by your payment app, and tap a pin for details.
           </li>
           <li>
-            Badges distinguish <strong className="font-medium text-[var(--ink)]">chain estimates</strong>{" "}
-            from <strong className="font-medium text-[var(--ink)]">unverified</strong>{" "}
-            independent shops — we do not claim field verification we have not done.
+            Badges distinguish{" "}
+            <strong className="font-medium text-[var(--ink)]">
+              chain estimates
+            </strong>{" "}
+            from{" "}
+            <strong className="font-medium text-[var(--ink)]">
+              unverified
+            </strong>{" "}
+            independent shops — we do not claim field verification we have not
+            done.
           </li>
           <li>
-            Tap <em>worked</em> / <em>did not work</em> after paying to help the next
-            visitor. Reports are aggregated; we do not fabricate traction for pitches.
+            Tap <em>worked</em> / <em>did not work</em> after paying to help the
+            next visitor. Reports are aggregated; we do not fabricate traction
+            for pitches.
           </li>
         </ul>
         <p className="text-sm text-[var(--muted)]">
@@ -256,7 +288,10 @@ export default function ForCityPage() {
             {DEMO_URL}
           </a>
           {" · "}
-          <Link href="/area/fukuoka" className="text-[var(--pay-deep)] underline">
+          <Link
+            href="/area/fukuoka"
+            className="text-[var(--pay-deep)] underline"
+          >
             Fukuoka shop list
           </Link>
         </p>

@@ -36,7 +36,8 @@ export default function ForCityPrintPage() {
             福岡市向け — 店舗キャッシュレス可否マップ
           </h1>
           <p className="mt-2 text-sm text-[var(--muted)]">
-            市民・観光客の「今使えた / 使えなかった」報告で鮮度を上げる Web アプリ（個人開発プロトタイプ）
+            市民・観光客の「今使えた / 使えなかった」報告で鮮度を上げる Web
+            アプリ（個人開発プロトタイプ）
           </p>
         </header>
 
@@ -45,9 +46,10 @@ export default function ForCityPrintPage() {
             課題
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-[var(--ink)]">
-            飲食・小売の直前に「PayPay / クレジットが通るか」が分からず、機会損失と現金依存が残る。Google
-            マップ等の決済情報は鮮度が弱く、失敗報告を反映する仕組みがない。福岡市 DX
-            戦略のキャッシュレス推進に、民間店舗の見える化が足りない。
+            飲食・小売の直前に「PayPay /
+            クレジットが通るか」が分からず、機会損失と現金依存が残る。Google
+            マップ等の決済情報は鮮度が弱く、失敗報告を反映する仕組みがない。福岡市
+            DX 戦略のキャッシュレス推進に、民間店舗の見える化が足りない。
           </p>
         </section>
 
@@ -67,7 +69,10 @@ export default function ForCityPrintPage() {
           </h2>
           <p className="mt-2 text-sm text-[var(--ink)]">
             <span className="font-medium">{DEMO_URL}</span>
-            <span className="text-[var(--muted)]"> — 地図 → ピン → 「今使えた / 使えなかった」</span>
+            <span className="text-[var(--muted)]">
+              {" "}
+              — 地図 → ピン → 「今使えた / 使えなかった」
+            </span>
           </p>
         </section>
 
@@ -96,7 +101,8 @@ export default function ForCityPrintPage() {
 
         <footer className="mt-8 border-t border-[var(--line)] pt-4 text-xs text-[var(--muted)]">
           <p>
-            詳細: /for-city · docs/pitch-fukuoka.md · DB は Loomap と一時同居（採択後に分離予定）
+            詳細: /for-city · docs/pitch-fukuoka.md · docs/pitch-one-pager.md ·
+            DB は Loomap と一時同居（採択後に分離予定）
           </p>
           <p className="mt-1">2026-07 · Paymap（使えるペイ）</p>
         </footer>

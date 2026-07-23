@@ -20,10 +20,11 @@ export const metadata: Metadata = {
     template: "%s | Paymap",
   },
   description:
-    "お店のキャッシュレス可否・PayPayやクレジットカード対応・営業時間を地図で確認。ユーザー報告で精度が上がる「使えるペイ」。",
+    "福岡・天神〜博多を中心に、お店のキャッシュレス可否・PayPayやクレジットカード対応・営業時間を地図で確認。ユーザー報告で精度が上がる「使えるペイ」。",
   openGraph: {
-    title: "Paymap（使えるペイ）",
-    description: "今この店で、自分の決済が通るかがわかる。",
+    title: "Paymap（使えるペイ）— 福岡のキャッシュレス対応マップ",
+    description:
+      "福岡の実在店舗で、今この店で自分の決済が通るかがわかる。PayPay・クレジット等の対応を地図と報告で更新。",
     locale: "ja_JP",
     type: "website",
   },

@@ -24,10 +24,9 @@ export function PinSheet({ shop }: { shop: Shop }) {
   const showMethods: PaymentMethod[] =
     methods.length > 0 ? methods : PAYMENT_FILTERS.slice(0, 3);
 
-  const cashOnly =
-    shop.payments.length === 1 &&
-    shop.payments[0] === "cash" &&
-    methods.length === 0;
+  const seedCashOnly =
+    shop.payments.length === 1 && shop.payments[0] === "cash";
+  const cashOnly = seedCashOnly && methods.length === 0;
 
   async function onReport(method: PaymentMethod, kind: "worked" | "failed") {
     const key = `${method}:${kind}`;
@@ -77,7 +76,7 @@ export function PinSheet({ shop }: { shop: Shop }) {
         <div className="rounded-lg bg-[var(--wash)] px-3 py-2">
           <dt className="text-[var(--muted)]">キャッシュレス</dt>
           <dd className="mt-0.5 font-medium text-[var(--ink)]">
-            {cashOnly ? "現金のみ（シード）" : "対応あり"}
+            {seedCashOnly ? "未検証（シードは現金のみ）" : "対応あり"}
           </dd>
         </div>
       </dl>
@@ -86,6 +85,11 @@ export function PinSheet({ shop }: { shop: Shop }) {
         <h3 className="text-sm font-semibold text-[var(--ink)]">対応決済</h3>
         {flash ? (
           <p className="mt-1 text-xs text-[var(--pay-deep)]">{flash}</p>
+        ) : null}
+        {cashOnly ? (
+          <p className="mt-1 text-xs text-[var(--muted)]">
+            シードは現金のみですが、PayPay・クレジット等は未検証でも報告できます。
+          </p>
         ) : null}
         {!stats.some((s) => s.shop_id === shop.id) ? (
           <p className="mt-1 text-xs text-[var(--muted)]">
