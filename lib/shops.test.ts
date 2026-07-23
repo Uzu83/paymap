@@ -58,4 +58,10 @@ describe("shops area defaults", () => {
     expect(west.every((s) => s.area === "fukuoka")).toBe(true);
     expect(west.every((s) => s.district === "tenjin-west")).toBe(true);
   });
+
+  it("district フィルタでマイクロエリアに絞れる", () => {
+    const nakasu = filterShops({ area: "fukuoka", district: "nakasu" });
+    expect(nakasu.length).toBeGreaterThan(0);
+    expect(nakasu.every((s) => s.district === "nakasu")).toBe(true);
+  });
 });

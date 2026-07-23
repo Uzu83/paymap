@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { PaymentStatusBadge } from "@/components/PaymentStatusBadge";
 import { formatConfidence, mergeMethodConfidence } from "@/lib/confidence";
 import { GENRE_LABELS, PAYMENT_FILTERS, PAYMENT_LABELS } from "@/lib/payments";
+import { shopLocalBusinessJsonLd } from "@/lib/jsonLd";
 import { getShopById, SHOPS } from "@/lib/shops";
 
 type Props = { params: Promise<{ id: string }> };
@@ -49,9 +50,15 @@ export default async function ShopPage({ params }: Props) {
   if (!shop) notFound();
 
   const cashless = shop.payments.some((p) => p !== "cash");
+  const jsonLd = shopLocalBusinessJsonLd(shop);
 
   return (
     <main className="mx-auto min-h-full max-w-lg px-4 py-8">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD for SEO
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link
         href="/"
         className="text-sm font-medium text-[var(--pay-deep)] underline-offset-2 hover:underline"

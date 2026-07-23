@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP, Sora } from "next/font/google";
 import "./globals.css";
@@ -46,7 +47,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className={`${display.variable} ${body.variable} h-full`}>
-      <body className="min-h-full antialiased">{children}</body>
+      <body className="min-h-full antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

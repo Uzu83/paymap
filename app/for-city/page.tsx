@@ -130,6 +130,12 @@ export default function ForCityPage() {
         >
           FAQ・リスク
         </Link>
+        <Link
+          href="/contact"
+          className="rounded-lg bg-[var(--pay)] px-3 py-1.5 font-medium text-[var(--ink)] hover:opacity-90"
+        >
+          お問い合わせ
+        </Link>
       </div>
 
       <section className="mt-10 space-y-3">

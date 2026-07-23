@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { shopItemListJsonLd } from "@/lib/jsonLd";
 import { PAYMENT_LABELS } from "@/lib/payments";
 import { shopsInArea } from "@/lib/shops";
 
@@ -13,9 +14,18 @@ export default function FukuokaAreaPage() {
   const shops = shopsInArea("fukuoka").filter((s) => !s.sample);
   const estimated = shops.filter((s) => s.paymentStatus === "estimated").length;
   const unverified = shops.filter((s) => s.paymentStatus === "unverified").length;
+  const jsonLd = shopItemListJsonLd(
+    shops,
+    "福岡（天神〜博多）のキャッシュレス対応店",
+  );
 
   return (
     <main className="mx-auto min-h-full max-w-2xl px-4 py-8">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD for SEO
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link
         href="/"
         className="text-sm font-medium text-[var(--pay-deep)] underline-offset-2 hover:underline"

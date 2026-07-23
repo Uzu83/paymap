@@ -1,13 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SHOPS } from "@/lib/shops";
-
-function siteBaseUrl(): string {
-  // WHY: VERCEL_URL はデプロイ固有ホストになり canonical が割れる。本番固定を優先。
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, "");
-  }
-  return "https://paymap-six.vercel.app";
-}
+import { siteBaseUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteBaseUrl();
@@ -50,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${base}/contact`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.75,
     },
     {
       url: `${base}/pitch/deck`,

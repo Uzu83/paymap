@@ -24,6 +24,7 @@ const MapView = dynamic(
 
 export function MapApp() {
   const area = useMapUiStore((s) => s.area);
+  const district = useMapUiStore((s) => s.district);
   const payment = useMapUiStore((s) => s.payment);
   const genre = useMapUiStore((s) => s.genre);
   const cashlessOnly = useMapUiStore((s) => s.cashlessOnly);
@@ -39,13 +40,14 @@ export function MapApp() {
     () =>
       filterShops({
         area,
+        district: area === "fukuoka" ? district : null,
         payment,
         genre,
         cashlessOnly,
         nameQuery: searchQuery,
         includeSample: area === "shibuya",
       }),
-    [area, payment, genre, cashlessOnly, searchQuery],
+    [area, district, payment, genre, cashlessOnly, searchQuery],
   );
   const selected = shops.find((s) => s.id === selectedId) ?? null;
 
@@ -93,6 +95,12 @@ export function MapApp() {
                 className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
               >
                 FAQ
+              </Link>
+              <Link
+                href="/contact"
+                className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
+              >
+                お問い合わせ
               </Link>
               <Link
                 href="/for-city"

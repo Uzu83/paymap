@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { SearchBar } from "@/components/SearchBar";
 import { GENRE_LABELS, PAYMENT_FILTERS, PAYMENT_LABELS } from "@/lib/payments";
-import { AREA_LABELS } from "@/lib/shops";
+import { AREA_LABELS, FUKUOKA_DISTRICTS } from "@/lib/shops";
 import type { AreaId, Genre, PaymentMethod } from "@/lib/types";
 import { useMapUiStore } from "@/store/mapUiStore";
 
@@ -13,10 +13,12 @@ const AREAS: AreaId[] = ["fukuoka", "shibuya"];
 export function FilterBar() {
   const {
     area,
+    district,
     payment,
     genre,
     cashlessOnly,
     setArea,
+    setDistrict,
     setPayment,
     setGenre,
     setCashlessOnly,
@@ -53,6 +55,27 @@ export function FilterBar() {
           </p>
         ) : null}
       </div>
+      {area === "fukuoka" ? (
+        <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <Chip
+            active={district === null}
+            onClick={() => setDistrict(null)}
+          >
+            すべて
+          </Chip>
+          {(
+            Object.entries(FUKUOKA_DISTRICTS) as [keyof typeof FUKUOKA_DISTRICTS, string][]
+          ).map(([id, label]) => (
+            <Chip
+              key={id}
+              active={district === id}
+              onClick={() => setDistrict(district === id ? null : id)}
+            >
+              {label}
+            </Chip>
+          ))}
+        </div>
+      ) : null}
       <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Chip
           active={cashlessOnly}

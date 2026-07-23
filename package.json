@@ -9,10 +9,12 @@
     "lint": "biome check .",
     "format": "biome check --write .",
     "test": "vitest run",
+    "seed:fukuoka": "node scripts/seed-fukuoka-osm.mjs",
     "check": "pnpm lint && pnpm exec tsc --noEmit && pnpm test && pnpm build"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.110.7",
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "leaflet": "^1.9.4",
     "next": "16.2.10",

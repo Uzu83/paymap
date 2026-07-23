@@ -14,6 +14,15 @@ export const AREA_LABELS: Record<AreaId, string> = {
   shibuya: "渋谷（サンプル）",
 };
 
+/** 福岡パイロットのマイクロエリア（地図フィルタ・住所ラベル用） */
+export const FUKUOKA_DISTRICTS = {
+  "tenjin-west": "天神西",
+  nakasu: "中洲",
+  "hakata-station": "博多駅",
+} as const;
+
+export type FukuokaDistrictId = keyof typeof FUKUOKA_DISTRICTS;
+
 export function getShopById(id: string): Shop | undefined {
   return SHOPS.find((s) => s.id === id);
 }
@@ -47,6 +56,7 @@ export function countFukuokaByPaymentStatus(): Record<
 
 export function filterShops(opts: {
   area?: AreaId;
+  district?: string | null;
   payment?: PaymentMethod | null;
   genre?: Genre | null;
   cashlessOnly?: boolean;
@@ -58,6 +68,7 @@ export function filterShops(opts: {
   return SHOPS.filter((shop) => {
     if (shop.area !== area) return false;
     if (!opts.includeSample && shop.sample) return false;
+    if (opts.district && shop.district !== opts.district) return false;
     if (nameQ && !shop.name.toLowerCase().includes(nameQ)) return false;
     if (opts.genre && shop.genre !== opts.genre) return false;
     if (opts.cashlessOnly) {
