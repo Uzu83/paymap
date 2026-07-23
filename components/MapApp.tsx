@@ -1,10 +1,11 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import { FilterBar } from "@/components/FilterBar";
 import { PinSheet } from "@/components/PinSheet";
-import { filterShops } from "@/lib/shops";
+import { AREA_LABELS, filterShops } from "@/lib/shops";
 import { useMapUiStore } from "@/store/mapUiStore";
 import { useReportStore } from "@/store/reportStore";
 
@@ -21,6 +22,7 @@ const MapView = dynamic(
 );
 
 export function MapApp() {
+  const area = useMapUiStore((s) => s.area);
   const payment = useMapUiStore((s) => s.payment);
   const genre = useMapUiStore((s) => s.genre);
   const cashlessOnly = useMapUiStore((s) => s.cashlessOnly);
@@ -32,8 +34,15 @@ export function MapApp() {
   }, [hydrate]);
 
   const shops = useMemo(
-    () => filterShops({ payment, genre, cashlessOnly }),
-    [payment, genre, cashlessOnly],
+    () =>
+      filterShops({
+        area,
+        payment,
+        genre,
+        cashlessOnly,
+        includeSample: area === "shibuya",
+      }),
+    [area, payment, genre, cashlessOnly],
   );
   const selected = shops.find((s) => s.id === selectedId) ?? null;
 
@@ -50,12 +59,20 @@ export function MapApp() {
               Paymap
             </p>
             <p className="mt-0.5 text-sm text-[var(--muted)]">
-              使えるペイ · 渋谷MVP
+              使えるペイ · {AREA_LABELS[area]}
             </p>
           </div>
-          <p className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs text-[var(--muted)] ring-1 ring-[var(--line)] backdrop-blur">
-            {shops.length}件
-          </p>
+          <div className="flex flex-col items-end gap-1">
+            <p className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs text-[var(--muted)] ring-1 ring-[var(--line)] backdrop-blur">
+              {shops.length}件
+            </p>
+            <Link
+              href="/for-city"
+              className="rounded-md bg-[var(--ink)] px-2 py-1 text-xs font-medium text-[var(--panel)]"
+            >
+              市向け説明
+            </Link>
+          </div>
         </div>
         <div className="mt-3">
           <FilterBar />

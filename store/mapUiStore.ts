@@ -1,11 +1,14 @@
 import { create } from "zustand";
-import type { Genre, PaymentMethod } from "@/lib/types";
+import { DEFAULT_AREA } from "@/lib/shops";
+import type { AreaId, Genre, PaymentMethod } from "@/lib/types";
 
 type MapUiState = {
+  area: AreaId;
   payment: PaymentMethod | null;
   genre: Genre | null;
   cashlessOnly: boolean;
   selectedId: string | null;
+  setArea: (a: AreaId) => void;
   setPayment: (p: PaymentMethod | null) => void;
   setGenre: (g: Genre | null) => void;
   setCashlessOnly: (v: boolean) => void;
@@ -13,10 +16,12 @@ type MapUiState = {
 };
 
 export const useMapUiStore = create<MapUiState>((set) => ({
+  area: DEFAULT_AREA,
   payment: null,
   genre: null,
   cashlessOnly: false,
   selectedId: null,
+  setArea: (area) => set({ area, selectedId: null }),
   setPayment: (payment) => set({ payment }),
   setGenre: (genre) => set({ genre }),
   setCashlessOnly: (cashlessOnly) => set({ cashlessOnly }),

@@ -1,16 +1,20 @@
 "use client";
 
 import { GENRE_LABELS, PAYMENT_FILTERS, PAYMENT_LABELS } from "@/lib/payments";
-import type { Genre, PaymentMethod } from "@/lib/types";
+import { AREA_LABELS } from "@/lib/shops";
+import type { AreaId, Genre, PaymentMethod } from "@/lib/types";
 import { useMapUiStore } from "@/store/mapUiStore";
 
 const GENRES: Genre[] = ["food", "cafe", "beauty", "retail", "convenience"];
+const AREAS: AreaId[] = ["fukuoka", "shibuya"];
 
 export function FilterBar() {
   const {
+    area,
     payment,
     genre,
     cashlessOnly,
+    setArea,
     setPayment,
     setGenre,
     setCashlessOnly,
@@ -18,6 +22,13 @@ export function FilterBar() {
 
   return (
     <div className="pointer-events-auto flex w-full flex-col gap-2">
+      <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {AREAS.map((a) => (
+          <Chip key={a} active={area === a} onClick={() => setArea(a)}>
+            {AREA_LABELS[a]}
+          </Chip>
+        ))}
+      </div>
       <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <Chip
           active={cashlessOnly}

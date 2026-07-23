@@ -5,7 +5,7 @@ import { useEffect, useMemo } from "react";
 import { MapContainer, Marker, TileLayer, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { isCashless } from "@/lib/payments";
-import { SHIBUYA_CENTER } from "@/lib/shops";
+import { FUKUOKA_CENTER } from "@/lib/shops";
 import type { Shop } from "@/lib/types";
 import { useMapUiStore } from "@/store/mapUiStore";
 
@@ -52,7 +52,7 @@ export function MapView({ shops }: { shops: Shop[] }) {
 
   return (
     <MapContainer
-      center={[SHIBUYA_CENTER.lat, SHIBUYA_CENTER.lng]}
+      center={[FUKUOKA_CENTER.lat, FUKUOKA_CENTER.lng]}
       zoom={15}
       className="h-full w-full"
       zoomControl={false}

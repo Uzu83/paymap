@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PaymentStatusBadge } from "@/components/PaymentStatusBadge";
 import { formatConfidence, mergeMethodConfidence } from "@/lib/confidence";
 import { GENRE_LABELS, PAYMENT_FILTERS, PAYMENT_LABELS } from "@/lib/payments";
 import { getShopById, SHOPS } from "@/lib/shops";
@@ -47,9 +48,14 @@ export default async function ShopPage({ params }: Props) {
       <h1 className="mt-2 font-[family-name:var(--font-display)] text-3xl font-bold tracking-tight text-[var(--ink)]">
         {shop.name}
       </h1>
-      <p className="mt-2 text-[var(--muted)]">
-        {GENRE_LABELS[shop.genre]} · {shop.address}
+      <p className="mt-2 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-[var(--muted)]">
+        <span>
+          {GENRE_LABELS[shop.genre]} ·{" "}
+          {shop.area === "fukuoka" ? "福岡" : "渋谷"}
+        </span>
+        <PaymentStatusBadge shop={shop} />
       </p>
+      <p className="mt-1 text-[var(--muted)]">{shop.address}</p>
 
       <section className="mt-8 space-y-3 rounded-2xl bg-[var(--panel)] p-5 ring-1 ring-[var(--line)]">
         <p className="text-sm text-[var(--muted)]">営業時間</p>
@@ -88,8 +94,11 @@ export default async function ShopPage({ params }: Props) {
       </section>
 
       <p className="mt-8 text-xs leading-relaxed text-[var(--muted)]">
-        シード最終確認 {shop.lastVerified}。地図上の「今使えた /
-        使えなかった」報告で信頼度が更新されます（端末内保存・MVP）。
+        出典 {shop.source ?? "unknown"}
+        {shop.osmId ? ` · OSM node/${shop.osmId}` : ""} · シード最終確認{" "}
+        {shop.lastVerified}。地図上の「今使えた /
+        使えなかった」報告で信頼度が更新されます。
+        {shop.sample ? " ※デモ用サンプル（審査本線ではない）。" : ""}
         {shop.note ? ` ${shop.note}` : ""}
       </p>
     </main>

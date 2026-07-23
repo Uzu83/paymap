@@ -1,5 +1,1417 @@
 [
   {
+    "id": "fukuoka-osm-502929378",
+    "name": "ビックカメラ",
+    "lat": 33.5875734,
+    "lng": 130.3986797,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "Mo-Su 10:00-21:00",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "rakuten_pay",
+      "aupay",
+      "cash"
+    ],
+    "seedConfidence": 0.93,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 502929378,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-574367792",
+    "name": "福岡リバレイン",
+    "lat": 33.5953282,
+    "lng": 130.4056486,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 574367792,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-761915472",
+    "name": "ローソン",
+    "lat": 33.5905196,
+    "lng": 130.3928081,
+    "area": "fukuoka",
+    "genre": "convenience",
+    "hours": "24/7",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "rakuten_pay",
+      "aupay",
+      "cash"
+    ],
+    "seedConfidence": 0.92,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 761915472,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-767170627",
+    "name": "モスバーガー",
+    "lat": 33.5930693,
+    "lng": 130.3976986,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "Mo-Su 07:00-02:00",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "cash"
+    ],
+    "seedConfidence": 0.88,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 767170627,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-767170630",
+    "name": "マクドナルド",
+    "lat": 33.5935296,
+    "lng": 130.3977045,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "cash"
+    ],
+    "seedConfidence": 0.9,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 767170630,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-767170634",
+    "name": "セブン-イレブン",
+    "lat": 33.5936904,
+    "lng": 130.397631,
+    "area": "fukuoka",
+    "genre": "convenience",
+    "hours": "要確認",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "rakuten_pay",
+      "aupay",
+      "cash"
+    ],
+    "seedConfidence": 0.92,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 767170634,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-862546345",
+    "name": "スターバックス",
+    "lat": 33.5906456,
+    "lng": 130.4184316,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "要確認",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "rakuten_pay",
+      "cash"
+    ],
+    "seedConfidence": 0.9,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 862546345,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-953306165",
+    "name": "ファミリーマート",
+    "lat": 33.5935461,
+    "lng": 130.4129576,
+    "area": "fukuoka",
+    "genre": "convenience",
+    "hours": "要確認",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "rakuten_pay",
+      "aupay",
+      "cash"
+    ],
+    "seedConfidence": 0.92,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 953306165,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-954065392",
+    "name": "インキューブ",
+    "lat": 33.5902452,
+    "lng": 130.3992031,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 954065392,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-1107258930",
+    "name": "大丸",
+    "lat": 33.5885827,
+    "lng": 130.4010757,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "要確認",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "rakuten_pay",
+      "aupay",
+      "cash"
+    ],
+    "seedConfidence": 0.9,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 1107258930,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-1107261280",
+    "name": "三越",
+    "lat": 33.5886542,
+    "lng": 130.4001852,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "Mo-Su 10:00-20:00",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "rakuten_pay",
+      "aupay",
+      "cash"
+    ],
+    "seedConfidence": 0.9,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 1107261280,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-1118312993",
+    "name": "エルガーラ",
+    "lat": 33.5889052,
+    "lng": 130.4013997,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 1118312993,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-2015245374",
+    "name": "吉野家",
+    "lat": 33.5896236,
+    "lng": 130.3969714,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "24/7",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "cash"
+    ],
+    "seedConfidence": 0.88,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 2015245374,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-2024516592",
+    "name": "Zetteria",
+    "lat": 33.5904692,
+    "lng": 130.3977911,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 2024516592,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-2145391550",
+    "name": "ほっともっと",
+    "lat": 33.5863037,
+    "lng": 130.4030847,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "cash"
+    ],
+    "seedConfidence": 0.85,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 2145391550,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-2319138568",
+    "name": "ブックオフ",
+    "lat": 33.5880227,
+    "lng": 130.4183806,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "Mo-Su 10:00-22:00",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "cash"
+    ],
+    "seedConfidence": 0.85,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 2319138568,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-2409463177",
+    "name": "やきとり 六三四",
+    "lat": 33.5883888,
+    "lng": 130.4036604,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 2409463177,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-2415646812",
+    "name": "Bar Recontrer",
+    "lat": 33.5862621,
+    "lng": 130.3954877,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 2415646812,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-2415646814",
+    "name": "バー ランコントレ",
+    "lat": 33.5858854,
+    "lng": 130.3921644,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "Tu-Su 18:00-03:00",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 2415646814,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-2415662472",
+    "name": "Off Broadway",
+    "lat": 33.5940313,
+    "lng": 130.3948682,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 2415662472,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-2497508310",
+    "name": "古書 入江書店",
+    "lat": 33.5876668,
+    "lng": 130.395172,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 2497508310,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-2570892127",
+    "name": "ジョイフル",
+    "lat": 33.5879566,
+    "lng": 130.4001772,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "24/7",
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "cash"
+    ],
+    "seedConfidence": 0.85,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "全国チェーンの一般的対応に基づく推定シード。店頭で最終確認を。",
+    "source": "osm",
+    "osmId": 2570892127,
+    "sample": false,
+    "paymentStatus": "estimated"
+  },
+  {
+    "id": "fukuoka-osm-3015489455",
+    "name": "とらのあな",
+    "lat": 33.5927878,
+    "lng": 130.3971396,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "11:00-20:00",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 3015489455,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3051842124",
+    "name": "Bangkok Time",
+    "lat": 33.5886462,
+    "lng": 130.3958535,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 3051842124,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3095140255",
+    "name": "松屋",
+    "lat": 33.5939169,
+    "lng": 130.4051975,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "24/7",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 3095140255,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3095247597",
+    "name": "レガネット天神 ターミナルショップ",
+    "lat": 33.5902225,
+    "lng": 130.3988424,
+    "area": "fukuoka",
+    "genre": "convenience",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 3095247597,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3143163785",
+    "name": "ドトールコーヒーショップ",
+    "lat": 33.5977977,
+    "lng": 130.410125,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 3143163785,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3146812437",
+    "name": "カホパーツセンター",
+    "lat": 33.5854903,
+    "lng": 130.4006046,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区近傍（OSM座標・決済未検証）",
+    "note": "OSM上の実在POI。キャッシュレス対応は未検証（要現地/報告）。",
+    "source": "osm",
+    "osmId": 3146812437,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3166277883",
+    "name": "因幡うどん",
+    "lat": 33.5892321,
+    "lng": 130.3995305,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3166277883,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3211913047",
+    "name": "JACQUSES MONOI",
+    "lat": 33.591632,
+    "lng": 130.4045192,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3211913047,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3358841593",
+    "name": "すき家",
+    "lat": 33.5909697,
+    "lng": 130.3929244,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3358841593,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3362656467",
+    "name": "博多居酒屋　うどんバー・カイネ",
+    "lat": 33.5965676,
+    "lng": 130.4037671,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3362656467,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3371563993",
+    "name": "焼鳥赤兵衛",
+    "lat": 33.587768,
+    "lng": 130.393942,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3371563993,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3474424606",
+    "name": "Gaza",
+    "lat": 33.5865657,
+    "lng": 130.3940986,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3474424606,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3474424609",
+    "name": "Manu Coffee",
+    "lat": 33.586596,
+    "lng": 130.3969678,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "Mo-Su 09:00-13:00",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3474424609,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3474425952",
+    "name": "Cat and Fish",
+    "lat": 33.5863698,
+    "lng": 130.3954939,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3474425952,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3509335593",
+    "name": "八媛",
+    "lat": 33.590081,
+    "lng": 130.390969,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3509335593,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3509336493",
+    "name": "油そば七色",
+    "lat": 33.590805,
+    "lng": 130.39186,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3509336493,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3516530919",
+    "name": "Kurumi Cafe",
+    "lat": 33.585322,
+    "lng": 130.3981352,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3516530919,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3516534475",
+    "name": "池三郎",
+    "lat": 33.586342,
+    "lng": 130.4010574,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3516534475,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3520833696",
+    "name": "World Wine Bar",
+    "lat": 33.5903036,
+    "lng": 130.3969593,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3520833696,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3555317381",
+    "name": "モカジャバカフェ パークサイド",
+    "lat": 33.5852706,
+    "lng": 130.3994784,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3555317381,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3555317382",
+    "name": "Bistro Jidorino",
+    "lat": 33.5854315,
+    "lng": 130.3993295,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3555317382,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3555321922",
+    "name": "Hungry Heaven",
+    "lat": 33.5861754,
+    "lng": 130.3986709,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "Mo-Su,PH 11:00-24:00",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3555321922,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3555321923",
+    "name": "Cafe Xando",
+    "lat": 33.5863384,
+    "lng": 130.3988796,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3555321923,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3574221105",
+    "name": "Water site Otto",
+    "lat": 33.5923989,
+    "lng": 130.4026671,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "Mo-Su 11:00-19:00",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3574221105,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3574697197",
+    "name": "無印良品",
+    "lat": 33.5938019,
+    "lng": 130.3983226,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3574697197,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3578371786",
+    "name": "焼とりの八兵衛",
+    "lat": 33.5860586,
+    "lng": 130.3968568,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3578371786,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3578371788",
+    "name": "Bar Vita",
+    "lat": 33.5858218,
+    "lng": 130.396081,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "Mo-Su,PH 11:30-02:00",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3578371788,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3586982922",
+    "name": "Uncle",
+    "lat": 33.5916211,
+    "lng": 130.4012833,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3586982922,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3631594400",
+    "name": "日本酒バー　雲レ日",
+    "lat": 33.588982,
+    "lng": 130.407823,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3631594400,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3741178741",
+    "name": "ミスタードーナツ",
+    "lat": 33.5901726,
+    "lng": 130.3986592,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "08:00-22:00",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3741178741,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3751230828",
+    "name": "マルイ",
+    "lat": 33.5889104,
+    "lng": 130.4191923,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3751230828,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3751249625",
+    "name": "ダイソー",
+    "lat": 33.591397,
+    "lng": 130.419603,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3751249625,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3751253325",
+    "name": "ポプラ",
+    "lat": 33.589941,
+    "lng": 130.417146,
+    "area": "fukuoka",
+    "genre": "convenience",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3751253325,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3751253326",
+    "name": "華味鳥",
+    "lat": 33.587342,
+    "lng": 130.417249,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3751253326,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3751255025",
+    "name": "ベローチェ",
+    "lat": 33.589916,
+    "lng": 130.4165018,
+    "area": "fukuoka",
+    "genre": "cafe",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3751255025,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3751255026",
+    "name": "餃子の王将",
+    "lat": 33.590222,
+    "lng": 130.416674,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3751255026,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3751259325",
+    "name": "あぷろ",
+    "lat": 33.588752,
+    "lng": 130.416481,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3751259325,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3751259525",
+    "name": "虎玄多",
+    "lat": 33.588537,
+    "lng": 130.416588,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3751259525,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3832064858",
+    "name": "デイリーヤマザキ",
+    "lat": 33.586102,
+    "lng": 130.391485,
+    "area": "fukuoka",
+    "genre": "convenience",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3832064858,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3832072669",
+    "name": "さらしな",
+    "lat": 33.588198,
+    "lng": 130.391014,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3832072669,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3832072670",
+    "name": "桜屋馬力キング",
+    "lat": 33.5866832,
+    "lng": 130.391029,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3832072670,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3832072671",
+    "name": "ゆで太郎",
+    "lat": 33.587033,
+    "lng": 130.390837,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3832072671,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3832073865",
+    "name": "Sunny",
+    "lat": 33.587498,
+    "lng": 130.390679,
+    "area": "fukuoka",
+    "genre": "retail",
+    "hours": "24/7",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3832073865,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3832074362",
+    "name": "카네토라,츠케멘",
+    "lat": 33.585965,
+    "lng": 130.390864,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3832074362,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3832074558",
+    "name": "あじと",
+    "lat": 33.5895,
+    "lng": 130.390579,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3832074558,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
+    "id": "fukuoka-osm-3832081157",
+    "name": "福寿飯店",
+    "lat": 33.587136,
+    "lng": 130.391223,
+    "area": "fukuoka",
+    "genre": "food",
+    "hours": "要確認",
+    "payments": [
+      "cash"
+    ],
+    "seedConfidence": 0.35,
+    "lastVerified": "2026-07-23",
+    "address": "福岡市中央区（天神〜博多・OSM座標）",
+    "note": "OSM実在・決済未検証",
+    "source": "osm",
+    "osmId": 3832081157,
+    "sample": false,
+    "paymentStatus": "unverified"
+  },
+  {
     "id": "shibuya-ramen-north",
     "name": "北口中華そば",
     "lat": 35.6612,
@@ -7,11 +1419,18 @@
     "area": "shibuya",
     "genre": "food",
     "hours": "11:00–23:00",
-    "payments": ["paypay", "credit_card", "cash"],
+    "payments": [
+      "paypay",
+      "credit_card",
+      "cash"
+    ],
     "seedConfidence": 0.7,
     "lastVerified": "2026-07-01",
     "address": "渋谷区道玄坂1丁目付近",
-    "note": "MVPシード。実在店の正確な対応状況は現地確認推奨。"
+    "note": "MVPシード。実在店の正確な対応状況は現地確認推奨。",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-cafe-park",
@@ -21,10 +1440,18 @@
     "area": "shibuya",
     "genre": "cafe",
     "hours": "8:00–20:00",
-    "payments": ["paypay", "transit_ic", "credit_card", "cash"],
+    "payments": [
+      "paypay",
+      "transit_ic",
+      "credit_card",
+      "cash"
+    ],
     "seedConfidence": 0.85,
     "lastVerified": "2026-07-10",
-    "address": "渋谷区神南1丁目付近"
+    "address": "渋谷区神南1丁目付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-yakiniku",
@@ -34,10 +1461,17 @@
     "area": "shibuya",
     "genre": "food",
     "hours": "17:00–翌1:00",
-    "payments": ["credit_card", "rakuten_pay", "cash"],
+    "payments": [
+      "credit_card",
+      "rakuten_pay",
+      "cash"
+    ],
     "seedConfidence": 0.65,
     "lastVerified": "2026-06-20",
-    "address": "渋谷区宇田川町付近"
+    "address": "渋谷区宇田川町付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-cash-only-izakaya",
@@ -47,11 +1481,16 @@
     "area": "shibuya",
     "genre": "food",
     "hours": "16:00–23:30",
-    "payments": ["cash"],
+    "payments": [
+      "cash"
+    ],
     "seedConfidence": 0.9,
     "lastVerified": "2026-07-05",
     "address": "渋谷区道玄坂2丁目付近",
-    "note": "現金のみのシード例。"
+    "note": "現金のみのシード例。",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-salon",
@@ -61,10 +1500,18 @@
     "area": "shibuya",
     "genre": "beauty",
     "hours": "10:00–20:00（定休火）",
-    "payments": ["paypay", "credit_card", "aupay", "cash"],
+    "payments": [
+      "paypay",
+      "credit_card",
+      "aupay",
+      "cash"
+    ],
     "seedConfidence": 0.75,
     "lastVerified": "2026-07-08",
-    "address": "渋谷区渋谷3丁目付近"
+    "address": "渋谷区渋谷3丁目付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-bento",
@@ -74,10 +1521,17 @@
     "area": "shibuya",
     "genre": "food",
     "hours": "10:30–15:00",
-    "payments": ["paypay", "transit_ic", "cash"],
+    "payments": [
+      "paypay",
+      "transit_ic",
+      "cash"
+    ],
     "seedConfidence": 0.8,
     "lastVerified": "2026-07-12",
-    "address": "渋谷区神宮前6丁目付近"
+    "address": "渋谷区神宮前6丁目付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-bookstore",
@@ -87,10 +1541,19 @@
     "area": "shibuya",
     "genre": "retail",
     "hours": "11:00–21:00",
-    "payments": ["credit_card", "transit_ic", "paypay", "rakuten_pay", "cash"],
+    "payments": [
+      "credit_card",
+      "transit_ic",
+      "paypay",
+      "rakuten_pay",
+      "cash"
+    ],
     "seedConfidence": 0.9,
     "lastVerified": "2026-07-15",
-    "address": "渋谷区宇田川町付近"
+    "address": "渋谷区宇田川町付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-konbini-a",
@@ -110,7 +1573,10 @@
     ],
     "seedConfidence": 0.95,
     "lastVerified": "2026-07-18",
-    "address": "渋谷駅東口付近"
+    "address": "渋谷駅東口付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-sushi",
@@ -120,10 +1586,18 @@
     "area": "shibuya",
     "genre": "food",
     "hours": "11:00–22:00",
-    "payments": ["paypay", "credit_card", "transit_ic", "cash"],
+    "payments": [
+      "paypay",
+      "credit_card",
+      "transit_ic",
+      "cash"
+    ],
     "seedConfidence": 0.88,
     "lastVerified": "2026-07-11",
-    "address": "渋谷区道玄坂付近"
+    "address": "渋谷区道玄坂付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-bar",
@@ -133,10 +1607,16 @@
     "area": "shibuya",
     "genre": "food",
     "hours": "20:00–翌4:00",
-    "payments": ["credit_card", "cash"],
+    "payments": [
+      "credit_card",
+      "cash"
+    ],
     "seedConfidence": 0.55,
     "lastVerified": "2026-05-30",
-    "address": "渋谷区円山町付近"
+    "address": "渋谷区円山町付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-udon",
@@ -146,10 +1626,17 @@
     "area": "shibuya",
     "genre": "food",
     "hours": "11:00–21:30",
-    "payments": ["paypay", "aupay", "cash"],
+    "payments": [
+      "paypay",
+      "aupay",
+      "cash"
+    ],
     "seedConfidence": 0.7,
     "lastVerified": "2026-07-02",
-    "address": "渋谷区神南付近"
+    "address": "渋谷区神南付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-apparel",
@@ -159,10 +1646,17 @@
     "area": "shibuya",
     "genre": "retail",
     "hours": "12:00–20:00",
-    "payments": ["credit_card", "paypay", "cash"],
+    "payments": [
+      "credit_card",
+      "paypay",
+      "cash"
+    ],
     "seedConfidence": 0.72,
     "lastVerified": "2026-06-28",
-    "address": "渋谷区神宮前6丁目付近"
+    "address": "渋谷区神宮前6丁目付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-nail",
@@ -172,10 +1666,17 @@
     "area": "shibuya",
     "genre": "beauty",
     "hours": "11:00–19:00（予約制）",
-    "payments": ["paypay", "rakuten_pay", "cash"],
+    "payments": [
+      "paypay",
+      "rakuten_pay",
+      "cash"
+    ],
     "seedConfidence": 0.6,
     "lastVerified": "2026-06-15",
-    "address": "渋谷区渋谷2丁目付近"
+    "address": "渋谷区渋谷2丁目付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-curry",
@@ -185,10 +1686,16 @@
     "area": "shibuya",
     "genre": "food",
     "hours": "11:30–15:00 / 17:30–21:00",
-    "payments": ["paypay", "cash"],
+    "payments": [
+      "paypay",
+      "cash"
+    ],
     "seedConfidence": 0.68,
     "lastVerified": "2026-07-09",
-    "address": "渋谷区神宮前付近"
+    "address": "渋谷区神宮前付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-bakery",
@@ -198,10 +1705,18 @@
     "area": "shibuya",
     "genre": "cafe",
     "hours": "7:30–18:00",
-    "payments": ["transit_ic", "credit_card", "paypay", "cash"],
+    "payments": [
+      "transit_ic",
+      "credit_card",
+      "paypay",
+      "cash"
+    ],
     "seedConfidence": 0.82,
     "lastVerified": "2026-07-14",
-    "address": "渋谷区東1丁目付近"
+    "address": "渋谷区東1丁目付近",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   },
   {
     "id": "shibuya-yakitori",
@@ -211,10 +1726,15 @@
     "area": "shibuya",
     "genre": "food",
     "hours": "17:00–24:00",
-    "payments": ["cash"],
+    "payments": [
+      "cash"
+    ],
     "seedConfidence": 0.85,
     "lastVerified": "2026-07-03",
     "address": "渋谷区桜丘町付近",
-    "note": "現金のみシード。"
+    "note": "現金のみシード。",
+    "sample": true,
+    "source": "sample",
+    "paymentStatus": "sample"
   }
 ]

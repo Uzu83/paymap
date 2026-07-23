@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { PaymentStatusBadge } from "@/components/PaymentStatusBadge";
 import { formatConfidence, mergeMethodCounts } from "@/lib/confidence";
 import { GENRE_LABELS, PAYMENT_FILTERS, PAYMENT_LABELS } from "@/lib/payments";
 import type { PaymentMethod, Shop } from "@/lib/types";
@@ -42,8 +43,13 @@ export function PinSheet({ shop }: { shop: Shop }) {
       <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-[var(--line)]" />
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-xs font-medium tracking-wide text-[var(--muted)]">
-            {GENRE_LABELS[shop.genre]} · 渋谷
+          <p className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-xs font-medium tracking-wide text-[var(--muted)]">
+            <span>
+              {GENRE_LABELS[shop.genre]} ·{" "}
+              {shop.area === "fukuoka" ? "福岡" : "渋谷"}
+              {shop.source === "osm" ? " · OSM" : ""}
+            </span>
+            <PaymentStatusBadge shop={shop} />
           </p>
           <h2 className="mt-0.5 font-[family-name:var(--font-display)] text-xl font-semibold tracking-tight text-[var(--ink)]">
             {shop.name}
@@ -77,6 +83,12 @@ export function PinSheet({ shop }: { shop: Shop }) {
         <h3 className="text-sm font-semibold text-[var(--ink)]">対応決済</h3>
         {flash ? (
           <p className="mt-1 text-xs text-[var(--pay-deep)]">{flash}</p>
+        ) : null}
+        {!stats.some((s) => s.shop_id === shop.id) ? (
+          <p className="mt-1 text-xs text-[var(--muted)]">
+            まだ報告がありません。最初の「今使えた /
+            使えなかった」が全体の精度を作ります（捏造しないでください）。
+          </p>
         ) : null}
         <ul className="mt-2 space-y-2">
           {showMethods.map((method) => {
@@ -141,7 +153,10 @@ export function PinSheet({ shop }: { shop: Shop }) {
       ) : null}
 
       <p className="mt-3 text-xs text-[var(--muted)]">
-        シード確認日 {shop.lastVerified} ·{" "}
+        出典 {shop.source ?? "unknown"}
+        {shop.osmId ? ` · OSM node/${shop.osmId}` : ""} · シード確認日{" "}
+        {shop.lastVerified}
+        {shop.sample ? " · ※デモ用サンプル（審査本線ではない）" : ""} ·{" "}
         <Link
           href={`/shop/${shop.id}`}
           className="underline underline-offset-2 hover:text-[var(--ink)]"
