@@ -82,6 +82,24 @@ export default function ForCityPage() {
         >
           印刷用1枚
         </Link>
+        <Link
+          href="/pitch/deck"
+          className="rounded-lg bg-[var(--wash)] px-3 py-1.5 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] hover:bg-[var(--panel)]"
+        >
+          ピッチデッキ
+        </Link>
+        <Link
+          href="/metrics"
+          className="rounded-lg bg-[var(--wash)] px-3 py-1.5 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] hover:bg-[var(--panel)]"
+        >
+          メトリクス
+        </Link>
+        <Link
+          href="/area/fukuoka/tenjin-west"
+          className="rounded-lg bg-[var(--wash)] px-3 py-1.5 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] hover:bg-[var(--panel)]"
+        >
+          天神西エリア
+        </Link>
         <a
           href="https://github.com/Uzu83/paymap/blob/main/docs/pitch-fukuoka.md"
           className="rounded-lg bg-[var(--wash)] px-3 py-1.5 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] hover:bg-[var(--panel)]"
@@ -100,6 +118,18 @@ export default function ForCityPage() {
         >
           初回50報告オペ
         </a>
+        <a
+          href="https://github.com/Uzu83/paymap/blob/main/docs/outreach-fukuoka.md"
+          className="rounded-lg bg-[var(--wash)] px-3 py-1.5 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] hover:bg-[var(--panel)]"
+        >
+          アウトリーチ文面
+        </a>
+        <Link
+          href="/faq"
+          className="rounded-lg bg-[var(--wash)] px-3 py-1.5 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] hover:bg-[var(--panel)]"
+        >
+          FAQ・リスク
+        </Link>
       </div>
 
       <section className="mt-10 space-y-3">
@@ -204,6 +234,39 @@ export default function ForCityPage() {
             <li key={ask}>{ask}</li>
           ))}
         </ul>
+      </section>
+
+      <section className="mt-10 space-y-3">
+        <h2 className="text-lg font-semibold">審査で聞かれること（要約）</h2>
+        <ul className="list-disc space-y-2 pl-5 text-sm text-[var(--muted)]">
+          <li>
+            <strong className="font-medium text-[var(--ink)]">出典</strong>
+            ：店舗位置は OSM。決済は推定または未検証から開始
+          </li>
+          <li>
+            <strong className="font-medium text-[var(--ink)]">未検証</strong>
+            ：現地確認・報告なし。バッジで明示
+          </li>
+          <li>
+            <strong className="font-medium text-[var(--ink)]">報告</strong>
+            ：実体験のみ。IP ハッシュでレート制限。捏造なし
+          </li>
+          <li>
+            <strong className="font-medium text-[var(--ink)]">Loomap 同居</strong>
+            ：無料枠の一時措置。採択・報告安定後に分離予定
+          </li>
+          <li>
+            <strong className="font-medium text-[var(--ink)]">市との関係</strong>
+            ：個人 MVP。市公式採択・FGN 採択は未確定
+          </li>
+        </ul>
+        <p className="text-sm text-[var(--muted)]">
+          詳細は{" "}
+          <Link href="/faq" className="text-[var(--pay-deep)] underline">
+            FAQ・リスク
+          </Link>
+          を参照。
+        </p>
       </section>
 
       <section className="mt-10 space-y-3">

@@ -44,6 +44,8 @@ export type Shop = {
   sample?: boolean;
   /** 決済情報の検証段階。未指定時は sample フラグから推定 */
   paymentStatus?: PaymentStatus;
+  /** パイロット用マイクロエリア（例: tenjin-west） */
+  district?: string;
 };
 
 export type ReportKind = "worked" | "failed";

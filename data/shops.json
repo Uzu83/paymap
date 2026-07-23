@@ -42,7 +42,8 @@
     "source": "osm",
     "osmId": 574367792,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "nakasu"
   },
   {
     "id": "fukuoka-osm-761915472",
@@ -162,7 +163,8 @@
     "source": "osm",
     "osmId": 862546345,
     "sample": false,
-    "paymentStatus": "estimated"
+    "paymentStatus": "estimated",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-953306165",
@@ -207,7 +209,8 @@
     "source": "osm",
     "osmId": 954065392,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "tenjin-west"
   },
   {
     "id": "fukuoka-osm-1107258930",
@@ -257,7 +260,8 @@
     "source": "osm",
     "osmId": 1107261280,
     "sample": false,
-    "paymentStatus": "estimated"
+    "paymentStatus": "estimated",
+    "district": "tenjin-west"
   },
   {
     "id": "fukuoka-osm-1118312993",
@@ -300,7 +304,8 @@
     "source": "osm",
     "osmId": 2015245374,
     "sample": false,
-    "paymentStatus": "estimated"
+    "paymentStatus": "estimated",
+    "district": "tenjin-west"
   },
   {
     "id": "fukuoka-osm-2024516592",
@@ -320,7 +325,8 @@
     "source": "osm",
     "osmId": 2024516592,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "tenjin-west"
   },
   {
     "id": "fukuoka-osm-2145391550",
@@ -366,7 +372,8 @@
     "source": "osm",
     "osmId": 2319138568,
     "sample": false,
-    "paymentStatus": "estimated"
+    "paymentStatus": "estimated",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-2409463177",
@@ -529,7 +536,8 @@
     "source": "osm",
     "osmId": 3051842124,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "tenjin-west"
   },
   {
     "id": "fukuoka-osm-3095140255",
@@ -549,7 +557,8 @@
     "source": "osm",
     "osmId": 3095140255,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "nakasu"
   },
   {
     "id": "fukuoka-osm-3095247597",
@@ -569,7 +578,8 @@
     "source": "osm",
     "osmId": 3095247597,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "tenjin-west"
   },
   {
     "id": "fukuoka-osm-3143163785",
@@ -629,7 +639,8 @@
     "source": "osm",
     "osmId": 3166277883,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "tenjin-west"
   },
   {
     "id": "fukuoka-osm-3211913047",
@@ -649,7 +660,8 @@
     "source": "osm",
     "osmId": 3211913047,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "nakasu"
   },
   {
     "id": "fukuoka-osm-3358841593",
@@ -869,7 +881,8 @@
     "source": "osm",
     "osmId": 3520833696,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "tenjin-west"
   },
   {
     "id": "fukuoka-osm-3555317381",
@@ -1089,7 +1102,8 @@
     "source": "osm",
     "osmId": 3741178741,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "tenjin-west"
   },
   {
     "id": "fukuoka-osm-3751230828",
@@ -1109,7 +1123,8 @@
     "source": "osm",
     "osmId": 3751230828,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-3751249625",
@@ -1129,7 +1144,8 @@
     "source": "osm",
     "osmId": 3751249625,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-3751253325",
@@ -1149,7 +1165,8 @@
     "source": "osm",
     "osmId": 3751253325,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-3751253326",
@@ -1169,7 +1186,8 @@
     "source": "osm",
     "osmId": 3751253326,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-3751255025",
@@ -1189,7 +1207,8 @@
     "source": "osm",
     "osmId": 3751255025,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-3751255026",
@@ -1209,7 +1228,8 @@
     "source": "osm",
     "osmId": 3751255026,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-3751259325",
@@ -1229,7 +1249,8 @@
     "source": "osm",
     "osmId": 3751259325,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-3751259525",
@@ -1249,7 +1270,8 @@
     "source": "osm",
     "osmId": 3751259525,
     "sample": false,
-    "paymentStatus": "unverified"
+    "paymentStatus": "unverified",
+    "district": "hakata-station"
   },
   {
     "id": "fukuoka-osm-3832064858",

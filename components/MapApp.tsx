@@ -27,6 +27,7 @@ export function MapApp() {
   const payment = useMapUiStore((s) => s.payment);
   const genre = useMapUiStore((s) => s.genre);
   const cashlessOnly = useMapUiStore((s) => s.cashlessOnly);
+  const searchQuery = useMapUiStore((s) => s.searchQuery);
   const selectedId = useMapUiStore((s) => s.selectedId);
   const hydrate = useReportStore((s) => s.hydrate);
 
@@ -41,9 +42,10 @@ export function MapApp() {
         payment,
         genre,
         cashlessOnly,
+        nameQuery: searchQuery,
         includeSample: area === "shibuya",
       }),
-    [area, payment, genre, cashlessOnly],
+    [area, payment, genre, cashlessOnly, searchQuery],
   );
   const selected = shops.find((s) => s.id === selectedId) ?? null;
 
@@ -69,10 +71,28 @@ export function MapApp() {
             </p>
             <div className="flex flex-wrap justify-end gap-1">
               <Link
+                href="/area/fukuoka/tenjin-west"
+                className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
+              >
+                天神西
+              </Link>
+              <Link
+                href="/metrics"
+                className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
+              >
+                メトリクス
+              </Link>
+              <Link
                 href="/area/fukuoka"
                 className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
               >
                 福岡エリア
+              </Link>
+              <Link
+                href="/faq"
+                className="rounded-md bg-[var(--panel)]/90 px-2 py-1 text-xs font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
+              >
+                FAQ
               </Link>
               <Link
                 href="/for-city"

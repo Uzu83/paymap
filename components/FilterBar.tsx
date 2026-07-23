@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { SearchBar } from "@/components/SearchBar";
 import { GENRE_LABELS, PAYMENT_FILTERS, PAYMENT_LABELS } from "@/lib/payments";
 import { AREA_LABELS } from "@/lib/shops";
 import type { AreaId, Genre, PaymentMethod } from "@/lib/types";
@@ -22,6 +24,21 @@ export function FilterBar() {
 
   return (
     <div className="pointer-events-auto flex w-full flex-col gap-2">
+      <SearchBar />
+      <div className="flex flex-wrap gap-2 text-xs">
+        <Link
+          href="/area/fukuoka/tenjin-west"
+          className="rounded-md bg-[var(--panel)]/95 px-2 py-1 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
+        >
+          天神西エリア
+        </Link>
+        <Link
+          href="/metrics"
+          className="rounded-md bg-[var(--panel)]/95 px-2 py-1 font-medium text-[var(--ink)] ring-1 ring-[var(--line)] backdrop-blur hover:bg-[var(--wash)]"
+        >
+          メトリクス
+        </Link>
+      </div>
       <div>
         <div className="flex gap-2 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           {AREAS.map((a) => (

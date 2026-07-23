@@ -3,6 +3,7 @@ import {
   DEFAULT_AREA,
   filterShops,
   shopsInArea,
+  shopsInDistrict,
 } from "./shops";
 
 describe("shops area defaults", () => {
@@ -43,5 +44,18 @@ describe("shops area defaults", () => {
   it("渋谷サンプルは paymentStatus が sample", () => {
     const shibuya = shopsInArea("shibuya");
     expect(shibuya.every((s) => s.paymentStatus === "sample")).toBe(true);
+  });
+
+  it("店名部分一致でフィルタできる", () => {
+    const all = filterShops({ area: "fukuoka", nameQuery: "ローソン" });
+    expect(all.length).toBeGreaterThan(0);
+    expect(all.every((s) => s.name.includes("ローソン"))).toBe(true);
+  });
+
+  it("天神西 district に bbox 内の店がタグ付けされている", () => {
+    const west = shopsInDistrict("tenjin-west");
+    expect(west.length).toBeGreaterThanOrEqual(5);
+    expect(west.every((s) => s.area === "fukuoka")).toBe(true);
+    expect(west.every((s) => s.district === "tenjin-west")).toBe(true);
   });
 });

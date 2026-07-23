@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP, Sora } from "next/font/google";
 import "./globals.css";
 
@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   },
   description:
     "福岡・天神〜博多を中心に、お店のキャッシュレス可否・PayPayやクレジットカード対応・営業時間を地図で確認。ユーザー報告で精度が上がる「使えるペイ」。",
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "Paymap（使えるペイ）— 福岡のキャッシュレス対応マップ",
     description:
@@ -28,6 +33,10 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#00c2a8",
 };
 
 export default function RootLayout({

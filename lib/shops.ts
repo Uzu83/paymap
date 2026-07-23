@@ -22,17 +22,43 @@ export function shopsInArea(area: AreaId): Shop[] {
   return SHOPS.filter((s) => s.area === area);
 }
 
+/** 天神西パイロット bbox（座標タグ付け用） */
+export const TENJIN_WEST_BBOX = {
+  latMin: 33.5885,
+  latMax: 33.5925,
+  lngMin: 130.3945,
+  lngMax: 130.4005,
+} as const;
+
+export function shopsInDistrict(district: string): Shop[] {
+  return SHOPS.filter((s) => s.district === district && !s.sample);
+}
+
+export function countFukuokaByPaymentStatus(): Record<
+  "estimated" | "unverified",
+  number
+> {
+  const fukuoka = shopsInArea("fukuoka").filter((s) => !s.sample);
+  return {
+    estimated: fukuoka.filter((s) => s.paymentStatus === "estimated").length,
+    unverified: fukuoka.filter((s) => s.paymentStatus === "unverified").length,
+  };
+}
+
 export function filterShops(opts: {
   area?: AreaId;
   payment?: PaymentMethod | null;
   genre?: Genre | null;
   cashlessOnly?: boolean;
   includeSample?: boolean;
+  nameQuery?: string;
 }): Shop[] {
   const area = opts.area ?? DEFAULT_AREA;
+  const nameQ = opts.nameQuery?.trim().toLowerCase() ?? "";
   return SHOPS.filter((shop) => {
     if (shop.area !== area) return false;
     if (!opts.includeSample && shop.sample) return false;
+    if (nameQ && !shop.name.toLowerCase().includes(nameQ)) return false;
     if (opts.genre && shop.genre !== opts.genre) return false;
     if (opts.cashlessOnly) {
       const cashless = shop.payments.some((p) => p !== "cash");
