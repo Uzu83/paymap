@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP, Sora } from "next/font/google";
 import "./globals.css";
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body className="min-h-full antialiased">
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
